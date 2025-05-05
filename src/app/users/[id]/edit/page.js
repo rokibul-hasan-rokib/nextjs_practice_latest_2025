@@ -12,7 +12,6 @@ export default function EditUserPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch user by ID
     axios.get(`/api/users/${id}`)
       .then(res => {
         setForm({
@@ -69,7 +68,7 @@ export default function EditUserPage() {
             value={form.email}
             onChange={handleChange}
             className="w-full border rounded p-2"
-            required
+            required 
           />
         </div>
         <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
